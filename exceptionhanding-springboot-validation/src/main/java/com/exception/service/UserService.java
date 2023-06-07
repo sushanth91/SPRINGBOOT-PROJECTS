@@ -26,6 +26,12 @@ public class UserService {
     public List<User> getALlUsers() {
         return repository.findAll();
     }
+    
+        
+//       public Integer deleteByFirstName(String firstName) {
+//            return repository.deleteByFirstName(firstName);
+
+//         }
 
 
     public User getUser(int id) throws UserNotFoundException {

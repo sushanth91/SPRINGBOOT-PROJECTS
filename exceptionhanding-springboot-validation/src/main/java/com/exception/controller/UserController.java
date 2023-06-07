@@ -30,11 +30,19 @@ public class UserController {
     public ResponseEntity<User> saveUser(@RequestBody @Valid UserRequest userRequest){
         return new ResponseEntity<>(service.saveUser(userRequest), HttpStatus.CREATED);
     }
+    
+//        @DeleteMapping("/delete/{firstName}")
+//     public  String deleteStudentByFirstName(@PathVariable String firstName){
+//         return studentService.deleteByFirstName(firstName) +"Student with first name : = "+firstName+"successfully";;
 
+//     }
+    
     @GetMapping("/fetchAll")
     public ResponseEntity<List<User>> getAllUsers(){
         return ResponseEntity.ok(service.getALlUsers());
     }
+    
+    
 
     @GetMapping("/{id}")
     public ResponseEntity<User> getUser(@PathVariable int id) throws UserNotFoundException {
